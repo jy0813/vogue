@@ -1,0 +1,196 @@
+<link href="./css/gallery.css" rel="stylesheet" type="text/css">
+
+<h3>gallery</h3>
+<h3>gallery</h3>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="./css/swiper.min.css">
+
+<!-- Slider main container -->
+<div class="swiper-container swiper-container-h">
+	<!-- Additional required wrapper -->
+	
+	<div class="swiper-wrapper">
+		<!-- 화보 1 -->
+		<div class="swiper-slide">
+		<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./images/gallery01-01.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery01-02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery01-03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery01-04.jpg" alt=""></div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="txtbox">
+				<p class="title">Do Not Disturb</p>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./images/gallery02-01.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery02-02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery02-03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery02-04.jpeg" alt=""></div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="txtbox">
+				<p class="title">블랙핑크도 찾은 한옥은 어디?</p>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./images/gallery03-01.png" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery03-02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery03-03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery03-04.jpg" alt=""></div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="txtbox">
+				<p class="title">형형색색의 꽃을 사용한 서머 레시피</p>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./images/gallery04-01.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery04-02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery04-03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery04-04.jpg" alt=""></div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="txtbox">
+				<p class="title">MOVE TO ZERO</p>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./images/gallery05-01.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery05-02.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery05-03.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="./images/gallery05-04.jpg" alt=""></div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="txtbox">
+				<p class="title">전기차 여행</p>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+		
+<!-- Swiper JS -->
+<script src="./script/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiperH = new Swiper('.swiper-container-h', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1200:{
+				slidesPerView: 4,
+			},
+			900:{
+				slidesPerView: 3,
+			},
+			600:{
+				slidesPerView:2,
+			}
+		}
+	});
+	var swiperV = new Swiper('.swiper-container-v', {
+		direction: 'vertical',
+		slidesPerView: 1,
+		spaceBetween: 0,
+		pagination: {
+			el: '.swiper-pagination-v',
+			clickable: true,
+		},
+	});
+
+</script>		
+
+
+
+<nav class="sub_nav">
+<ul>
+	<li><a href="#">About</a></li>
+	<li><a href="#">News</a></li>
+	<li class="active"><a href="#">Gallery</a></li>
+	<li><a href="#">Magazine</a></li>
+	<li><a href="#">Runway</a></li>
+	<li><a href="#">Schedule</a></li>
+</ul>
+</nav>
+
+
+	<script>
+    $(function(){
+        
+    
+        //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+       //해당하는 메뉴의 가로크기가 늘어나거나 줄어듬
+            $(this).toggleClass('hover');    
+       //해당하는 메뉴의 형제요소들 서식 제거하거나 추가
+            $(this).siblings('.active').toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        
+        $('.sub_nav > ul > li:eq(0)').click(function(){
+            sublink('./sub/profile.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            sublink('./sub/news.html');
+            
+        });
+        
+        
+         $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            return false; 
+        });
+        
+         $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            sublink('./sub/discography.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            sublink('./sub/producing.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            sublink('./sub/schedule.html');
+        });
+        //클릭한 a 요소의 주소를 받아서 함수에 넘겨준다.
+        
+          function sublink(aurl){
+            
+            //위에서 받은 매개변수값을 아래 삽입하여 페이지가 나오게하기
+            
+            $('section').load(aurl);
+        }
+        
+      
+    });
+        
+    </script>
+    

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@media screen and (max-width : 1025px) and (min-width: 480px){
+  
+ nav.gnb_main{
+    top: 160px;
+    transform: translateY(0);
+    left: 50px;
+  }
+  
+}

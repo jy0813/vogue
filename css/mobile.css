@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@media screen and (max-width : 480px) {
+
+  header {
+    padding: 20px;
+    height: 80px;
+  }
+
+  header > h1 {
+    font-size: 32px;
+    margin-top: 5px;
+  }
+
+  header > .toggle {
+    padding: 5px;
+    margin-top: -10px;
+  }
+
+  header > .toggle > .bar {
+    right: 20px
+  }
+
+  header > .toggle > .bar:first-child {
+    top: 30px;
+  }
+
+  header > .toggle > .bar:nth-child(2) {
+    top: 42px;
+  }
+
+  header > .toggle > .bar:last-child {
+    top: 54px;
+  }
+
+  .toggle > .bar.closeToggle_L {
+    top: 35px !important;
+  }
+
+  .toggle > .bar.closeToggle_R {
+    top: 35px !important;
+  }
+
+  /* 토글메뉴 */
+
+  .toggleMenu > .bgTxt {
+    font-size: 95px;
+    top: 80px;
+    left: 20px;
+    transform: translateY(0);
+  }
+
+  .toggleMenu > nav {
+    right: 20px;
+  }
+  
+  .toggleMenu > nav > ul > li > a{
+    font-size: 42px;
+  }
+  .toggleMenu > nav > ul > li > .bar{
+    margin: 30px 0;
+  }
+
+
+  /* 배경 */
+
+  .bgMovie {
+    width: 200%;
+    right: 0;
+  }
+
+  /* 메인화면 내비게이션 */
+
+  nav.gnb_main {
+    top: 100px;
+    transform: translateY(0);
+    left: 20px;
+  }
+
+  nav.gnb_main > ul > li {
+    height: 50px;
+  }
+
+  nav.gnb_main > ul > li > a {
+    font-size: 48px;
+  }
+
+  nav.gnb_main > ul > li > .fill {
+    font-size: 48px;
+  }
+
+  /* SNS버튼 */
+
+  .snsBtn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .snsBtn > ul > li > a {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+  }
+
+}

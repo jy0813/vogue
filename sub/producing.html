@@ -1,0 +1,180 @@
+
+	    <link href="./css/producing.css" rel="stylesheet" type="text/css">
+	    <link href="./css/swiper.min.css" rel="stylesheet" type="text/css">
+	    
+	    <h3>RUNWAY</h3>
+	    <h3>RUNWAY</h3>
+	    
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+	                <img src="./images/runway-01.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Spyder</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-02.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Valentino</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-03.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Thom Browne</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-04.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Stella McCartney</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-05.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Saint Laurent</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-06.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Sacai</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-07.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Rokh</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-08.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Rochas</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-09.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Paco Rabanne</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-10.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Ottolinger</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-11.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Olivier Theyskens</div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">
+	                <img src="./images/runway-12.jpg" alt="프로듀싱">
+	                <div class="txtBg">
+	                   <div class="txt">Fall/Winter 2020 Ready To Wear<br>Off White</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    
+    <!-- 슬라이드 좌,우 버튼 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 스와이퍼 슬라이드 스크립트 소스 -->
+    <script src="./script/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            slidesPerView:1,
+            slidesPerColumn:2, //1칸에 2장의 이미지
+            spaceBetween:30, //간격
+            navigation:{
+                nextEl:'.swiper-button-next',
+                prevEl:'.swiper-button-prev',
+            },
+            breakpoints:{
+                1400:{
+                    slidesPerView:4,
+                    slidesPerColumn:2,
+                },
+                965:{
+                    slidesPerView:3,
+                    slidesPerColumn:2,
+                },
+                560:{
+                    slidesPerView:2,
+                    slidesPerColumn:2,
+                }
+            }
+        });   
+    </script>
+
+<nav class="sub_nav">
+<ul>
+	<li><a href="#">About</a></li>
+	<li><a href="#">News</a></li>
+	<li><a href="#">Gallery</a></li>
+	<li><a href="#">Magazine</a></li>
+	<li class="active"><a href="#">Runway</a></li>
+	<li><a href="#">Schedule</a></li>
+</ul>
+</nav>
+
+
+	<script>
+    $(function(){
+        
+    
+        //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+       //해당하는 메뉴의 가로크기가 늘어나거나 줄어듬
+            $(this).toggleClass('hover');    
+       //해당하는 메뉴의 형제요소들 서식 제거하거나 추가
+            $(this).siblings('.active').toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        
+        $('.sub_nav > ul > li:eq(0)').click(function(){
+            sublink('./sub/profile.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            sublink('./sub/news.html');
+            
+        });
+        
+        
+         $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            sublink('./sub/gallery.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            sublink('./sub/discography.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            return false;
+        });
+        
+         $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            sublink('./sub/schedule.html');
+        });
+        //클릭한 a 요소의 주소를 받아서 함수에 넘겨준다.
+        
+          function sublink(aurl){
+            
+            //위에서 받은 매개변수값을 아래 삽입하여 페이지가 나오게하기
+            
+            $('section').load(aurl);
+        }
+        
+      
+    });
+        
+    </script>

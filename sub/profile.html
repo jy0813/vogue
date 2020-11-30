@@ -1,0 +1,95 @@
+	 <link href="./css/profile.css" rel="stylesheet" type="text/css">
+		 
+		 <div class="title">
+		 	<h3>VOGUE</h3>
+		 	<h3>VOGUE</h3>
+		 	<div class="titleBar"></div>
+		 	<p class="txt">FASHION MAGAZINE</p>
+		 </div>
+		 
+	 <div class="content">
+		<ul class="left">
+			<li>창간</li>
+			<li>발행회사</li>
+			<li>위치</li>
+			<li>홈페이지</li>
+			<li>Editor-in-Chief</li>
+		</ul>
+		<ul class="right">
+			<li>1996.08</li>
+			<li>Doosan Magazine</li>
+			<li>서울 강남구 논현동</li>
+			<li>WWW.VOGUE.CO.KR</li>
+			<li>신광호</li>
+		</ul>
+	</div>
+		 
+	<div class="photo">
+		<img src="./images/voguerunway.jpg" alt="프로필사진">
+		<div class="lineBox"></div>
+		<div class="phototitle">Magazine</div>
+	</div>	
+	
+	 <!--	서브페이지에서만 사용하는 내비게이션 -->
+	<nav class="sub_nav">
+			<ul>
+				<li class="active"><a href="#">About</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Magazine</a></li>
+				<li><a href="#">Runway</a></li>
+				<li><a href="#">Schedule</a></li>
+			</ul>
+	</nav>	 
+	
+	<script>
+    $(function(){
+        
+    
+        //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+       //해당하는 메뉴의 가로크기가 늘어나거나 줄어듬
+            $(this).toggleClass('hover');    
+       //해당하는 메뉴의 형제요소들 서식 제거하거나 추가
+            $(this).siblings('.active').toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        
+        $('.sub_nav > ul > li:eq(0)').click(function(){
+            return false;
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            sublink('./sub/news.html');
+        });
+        
+        
+         $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            sublink('./sub/gallery.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            sublink('./sub/discography.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            sublink('./sub/producing.html');
+        });
+        
+         $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            sublink('./sub/schedule.html');
+        });
+        //클릭한 a 요소의 주소를 받아서 함수에 넘겨준다.
+        
+          function sublink(aurl){
+            
+            //위에서 받은 매개변수값을 아래 삽입하여 페이지가 나오게하기
+            
+            $('section').load(aurl);
+        }
+        
+      
+    });
+        
+    </script>
